@@ -4,22 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>test</title>
+    <style>
+        .is-loading { background: red;  }
+    </style>
   </head>
   <body>
     <div id="root">
-        <button v-bind:title="title">Hover Over me</button>
+        <task-list></task>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <!-- built files will be auto injected -->
-    <script>
-
-        let app = new Vue({
-            el: "#root",
-            data: {
-                title: "Now the title bein set through JavaScript"
-            }
-        });
-
-    </script>    
+    <script src="main.js"></script>    
   </body>
 </html>
