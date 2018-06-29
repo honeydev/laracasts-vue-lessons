@@ -3,15 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <title>test</title>
     <style>
-        .is-loading { background: red; }
+        body {
+            padding-top: 40px;
+        }
     </style>
   </head>
   <body>
-    <div id="root">
-        <task-list></task>
+    <div id="root" class="container">
+        <modal v-if="showModal" @close="showModal = false"></modal>
+        <button @click="showModal = true">Show modal</button>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <!-- built files will be auto injected -->
     <script src="main.js"></script>    
